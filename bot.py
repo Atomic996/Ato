@@ -18,53 +18,41 @@ fields = {
     "2d3d": {
         "title": "2D & 3D",
         "lessons": {
-            "2d_intro": {
-                "text": "2D : مقدمة في التصميم ثنائي الأبعاد",
-                "video": "https://youtu.be/2d_intro"
-            },
-            "3d_intro": {
-                "text": "الدرس 2: مقدمة في التصميم ثلاثي الأبعاد",
-                "video": "https://youtu.be/3d_intro"
-            }
+            f"lesson{i}": {
+                "text": f"الدرس {i}: مقدمة في التصميم {'ثنائي' if i <= 5 else 'ثلاثي'} الأبعاد",
+                "video": f"https://www.youtube.com/watch?v={'Pz75QUo7K5M' if i == 1 else 'LtZg_dvJAFQ' if i == 2 else 'ihQOj7J5RZY' if i == 3 else 'NLZMWT2lKRM' if i == 4 else 'SOFFAHgYLCU' if i == 5 else 'aAQGgH5-2Rs' if i == 6 else '8Y1VR7LOgR0' if i == 7 else 'r0N0nLPVwbA' if i == 8 else '8_gEF9jzWzY' if i == 9 else '8CxeqNQ3S3g'}",
+                "pdf": f"https://www.cs.cmu.edu/~15495/handouts/3d_graphics_tutorial.pdf"
+            } for i in range(1, 11)
         }
     },
     "algorithms": {
         "title": "الخوارزميات",
         "lessons": {
-            "algo1": {
-                "text": "الدرس 1: ما هي الخوارزميات؟",
-                "video": "https://youtu.be/algo_intro"
-            },
-            "algo2": {
-                "text": "الدرس 2: خوارزميات الفرز",
-                "video": "https://youtu.be/sorting_algo"
-            }
+            f"lesson{i}": {
+                "text": f"الدرس {i}: {'مقدمة في الخوارزميات' if i == 1 else 'مفاهيم أساسية' if i == 2 else 'أنواع الخوارزميات' if i == 3 else 'خوارزميات الفرز' if i == 4 else 'خوارزميات البحث' if i == 5 else 'التحليل الزمني' if i == 6 else 'التحليل المكاني' if i == 7 else 'البرمجة الديناميكية' if i == 8 else 'خوارزميات الرسم البياني' if i == 9 else 'خوارزميات متقدمة'}",
+                "video": f"https://www.youtube.com/watch?v={'fNZzQZgDyWc' if i == 1 else 'aK2Q5F1JpPQ' if i == 2 else 'ImtZ5yENzgE' if i == 3 else 'kgBjXUE_Nwc' if i == 4 else 'coQ5dg8wM2o' if i == 5 else 'aivIekQBT3I' if i == 6 else 'E7F8pNH84Ck' if i == 7 else 'FhQvxU_f2Aw' if i == 8 else 'ZmP3x9kA3rI' if i == 9 else '0bJrUUGTt8I'}",
+                "pdf": f"https://cses.fi/book/book.pdf"
+            } for i in range(1, 11)
         }
     },
     "data_modeling": {
         "title": "نمذجة البيانات",
         "lessons": {
-            "modeling1": {
-                "text": "الدرس 1: مفاهيم النمذجة",
-                "video": "https://youtu.be/data_modeling1"
-            },
-            "modeling2": {
-                "text": "الدرس 2: الكيانات والعلاقات",
-                "video": "https://youtu.be/data_modeling2"
-            }
+            f"lesson{i}": {
+                "text": f"الدرس {i}: {'مقدمة في نمذجة البيانات' if i == 1 else 'مفاهيم الكيانات' if i == 2 else 'العلاقات والخصائص' if i == 3 else 'المخططات ER' if i == 4 else 'التحويل إلى قواعد بيانات' if i == 5 else 'نمذجة البيانات العلائقية' if i == 6 else 'القيود والمعايير' if i == 7 else 'التكرار والاعتمادية' if i == 8 else 'نمذجة البيانات المتقدمة' if i == 9 else 'تصميم قواعد البيانات'}",
+                "video": f"https://www.youtube.com/watch?v={'k2Oqtv1jRUI' if i == 1 else '8r6sK5TEXsg' if i == 2 else 'Xqz4MyGQwSc' if i == 3 else 'q_YcWyHRw3Q' if i == 4 else '5fJGr7Pb49g' if i == 5 else 'lvtFK_mzJfc' if i == 6 else 'KxvVKZpF6kw' if i == 7 else 'SlhZBbnY3j8' if i == 8 else 'GHkw1Fq8J0I' if i == 9 else 'IRkGxeTFdTE'}",
+                "pdf": f"https://mohamedrabeea.net/books/book1_3521.pdf"
+            } for i in range(1, 11)
         }
     },
     "env_setup": {
         "title": "تحضير بيئة التنفيذ",
         "lessons": {
-            "setup1": {
-                "text": "الدرس 1: إعداد البيئة",
-                "video": "https://youtu.be/env_setup1"
-            },
-            "setup2": {
-                "text": "الدرس 2: تثبيت الحزم المطلوبة",
-                "video": "https://youtu.be/env_setup2"
-            }
+            f"lesson{i}": {
+                "text": f"الدرس {i}: {'مقدمة حول بيئة التطوير' if i == 1 else 'تثبيت الأدوات الأساسية' if i == 2 else 'إعداد VS Code' if i == 3 else 'تهيئة بايثون' if i == 4 else 'إعداد المشاريع' if i == 5 else 'نظام التحكم بالإصدارات' if i == 6 else 'Git و GitHub' if i == 7 else 'تنظيم الملفات' if i == 8 else 'إعداد بيئة افتراضية' if i == 9 else 'حل المشكلات التقنية'}",
+                "video": f"https://www.youtube.com/watch?v={'nxDPZbR_GjQ' if i == 1 else 'TmlkO36vJYY' if i == 2 else 'r_lK_j8vT-Q' if i == 3 else 'tLKnG2zDzdI' if i == 4 else 'hJWvbxEoy2g' if i == 5 else 'AXWjivTJ4vc' if i == 6 else 'RGOj5yH7evk' if i == 7 else 'RU2uG-WCX5M' if i == 8 else 'DLX62G4lc44' if i == 9 else 'U6kBX7PHeLk'}",
+                "pdf": f"https://www.cs.cmu.edu/~15131/resources/setup.pdf"
+            } for i in range(1, 11)
         }
     }
 }
