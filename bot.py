@@ -9,7 +9,9 @@ from telegram.ext import (
     JobQueue
 )
 from dotenv import load_dotenv
-from datetime import time  # استيراد الكائن time مباشرةً
+from datetime import time  # التصحيح: استيراد time مباشرة
+
+# ... (باقي الاستيرادات والبيانات تبقى كما هي)
 
 # تحميل بيانات التوكن من ملف البيئة
 load_dotenv()
@@ -76,82 +78,43 @@ lesson_data = {
         }
     }
 }
-
-def generate_main_menu():
-    return InlineKeyboardMarkup([
-        [InlineKeyboardButton(f["title"], callback_data=k)] 
-        for k, f in lesson_data.items()
-    ])
-
-def generate_lessons_menu(field_key: str):
-    field = lesson_data[field_key]
-    return InlineKeyboardMarkup([
-        [InlineKeyboardButton(
-            f"{i}. {lesson['text']}", 
-            callback_data=lesson_id
-        )] for i, (lesson_id, lesson) in enumerate(field["lessons"].items(), 1)
-    ] + [[InlineKeyboardButton("🏠 الرئيسية", callback_data="main")]])
-
-async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "مرحبا بك في منصة التعلم التفاعلي!",
-        reply_markup=generate_main_menu()
-    )
-
-async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
-    await query.answer()
-    
-    if query.data == "main":
-        await query.edit_message_text(
-            "اختر مجال التعلم:",
-            reply_markup=generate_main_menu()
-        )
-    elif query.data in lesson_data:
-        await show_lessons(query, query.data)
-    else:
-        await show_lesson_details(query)
-
-async def show_lessons(query, field_key):
-    await query.edit_message_text(
-        f"دروس {lesson_data[field_key]['title']}:",
-        reply_markup=generate_lessons_menu(field_key)
-    )
-
 async def show_lesson_details(query):
+    # التصحيح: البحث باستخدام مفتاح الدرس بدلًا من الـ id
     lesson = next(
-        (l for f in lesson_data.values() for l in f["lessons"].values() 
-         if l.get("id") == query.data), None
+        (lesson for field in lesson_data.values() 
+         for lesson_key, lesson in field["lessons"].items() 
+         if lesson_key == query.data), None
     )
     if lesson:
         buttons = [
             [InlineKeyboardButton("▶️ مشاهدة", url=lesson["video"])],
             [InlineKeyboardButton("📖 ملاحظات", url=lesson["pdf"])]
         ]
-        if lesson.get("quiz"):
-            buttons.append([InlineKeyboardButton("📝 اختبار", callback_data=lesson["quiz"])])
         await query.edit_message_text(
             lesson["text"],
             reply_markup=InlineKeyboardMarkup(buttons)
         )
 
-async def daily_reminder(context: ContextTypes.DEFAULT_TYPE):
-    for chat_id in context.bot_data.get("active_users", []):
-        await context.bot.send_message(
-            chat_id,
-            "⏰ تذكير: لم تكمل دروسك اليومية بعد!"
-        )
-
 if __name__ == "__main__":
     app = Application.builder().token(BOT_TOKEN).build()
     
-    # إضافة المعالجات
+    # التصحيح: إضافة المستخدمين النشطين عند البدء
+    @app.post_init
+    async def init(context: ContextTypes.DEFAULT_TYPE):
+        context.bot_data.setdefault("active_users", set())
+    
+    # التصحيح: تسجيل المستخدم عند استخدام /start
+    async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        context.bot_data["active_users"].add(update.effective_chat.id)
+        await update.message.reply_text(
+            "مرحبا بك في منصة التعلم التفاعلي!",
+            reply_markup=generate_main_menu()
+        )
+    
+    # التصحيح: استخدام time المستوردة مباشرة
+    job_queue = app.job_queue
+    job_queue.run_daily(daily_reminder, time=time(hour=18))
+    
     app.add_handler(CommandHandler("start", start_command))
     app.add_handler(CallbackQueryHandler(handle_buttons))
-    
-    # جدولة التذكيرات
-    job_queue = app.job_queue
-    job_queue.run_daily(daily_reminder, time=datetime.time(hour=18))
-    
-    # بدء التشغيل
     app.run_polling()
