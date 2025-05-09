@@ -3,9 +3,7 @@ services:
     name: telegram-bot
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn bot:fastapi_app --host 0.0.0.0 --port $PORT"
+    startCommand: "python bot.py"
     envVars:
       - key: BOT_TOKEN
-        fromEnvVar: BOT_TOKEN
-      - key: WEBHOOK_URL
-        fromEnvVar: WEBHOOK_URL
+        value: 7702154758:AAG1JDBSSqsgi8TOlO7IwOZukM_QPY67M-8
