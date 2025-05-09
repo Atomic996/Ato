@@ -19,7 +19,7 @@ fields = {
         "title": "2D & 3D",
         "lessons": {
             "2d_intro": {
-                "text": "الدرس 1: مقدمة في التصميم ثنائي الأبعاد",
+                "text": "2D : مقدمة في التصميم ثنائي الأبعاد",
                 "video": "https://youtu.be/2d_intro"
             },
             "3d_intro": {
