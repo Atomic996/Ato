@@ -9,6 +9,7 @@ from telegram.ext import (
     JobQueue
 )
 from dotenv import load_dotenv
+from datetime import time  # استيراد الكائن time مباشرةً
 
 # تحميل بيانات التوكن من ملف البيئة
 load_dotenv()
