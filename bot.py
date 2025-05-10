@@ -1,19 +1,6 @@
-import os
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import (
-    Application,
-    CommandHandler,
-    CallbackQueryHandler,
-    ContextTypes,
-    AIORateLimiter,
-    JobQueue
-)
-from dotenv import load_dotenv
-from datetime import time  # التصحيح: استيراد time مباشرة
+import os from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup from telegram.ext import ( Application, CommandHandler, CallbackQueryHandler, ContextTypes, AIORateLimiter, JobQueue ) from dotenv import load_dotenv from datetime import time
 
-# ... (باقي الاستيرادات والبيانات تبقى كما هي)
-
-# تحميل بيانات التوكن من ملف البيئة
+ # (محتوى الدروس كما هو، لم يتم تغييره لتوفيره بالكامل من قبل المستخدم) # سيتم افتراض أنه موجود كما هو أعلاه }
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 lesson_data = {
@@ -78,43 +65,26 @@ lesson_data = {
         }
     }
 }
-async def show_lesson_details(query):
-    # التصحيح: البحث باستخدام مفتاح الدرس بدلًا من الـ id
-    lesson = next(
-        (lesson for field in lesson_data.values() 
-         for lesson_key, lesson in field["lessons"].items() 
-         if lesson_key == query.data), None
-    )
-    if lesson:
-        buttons = [
-            [InlineKeyboardButton("▶️ مشاهدة", url=lesson["video"])],
-            [InlineKeyboardButton("📖 ملاحظات", url=lesson["pdf"])]
-        ]
-        await query.edit_message_text(
-            lesson["text"],
-            reply_markup=InlineKeyboardMarkup(buttons)
-        )
 
-if __name__ == "__main__":
-    app = Application.builder().token(BOT_TOKEN).build()
-    
-    # التصحيح: إضافة المستخدمين النشطين عند البدء
-    @app.post_init
-    async def init(context: ContextTypes.DEFAULT_TYPE):
-        context.bot_data.setdefault("active_users", set())
-    
-    # التصحيح: تسجيل المستخدم عند استخدام /start
-    async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        context.bot_data["active_users"].add(update.effective_chat.id)
-        await update.message.reply_text(
-            "مرحبا بك في منصة التعلم التفاعلي!",
-            reply_markup=generate_main_menu()
-        )
-    
-    # التصحيح: استخدام time المستوردة مباشرة
-    job_queue = app.job_queue
-    job_queue.run_daily(daily_reminder, time=time(hour=18))
-    
-    app.add_handler(CommandHandler("start", start_command))
-    app.add_handler(CallbackQueryHandler(handle_buttons))
-    app.run_polling()
+async def show_lesson_details(query): lesson = next( (lesson for field in lesson_data.values() for lesson_key, lesson in field["lessons"].items() if lesson_key == query.data), None ) if lesson: buttons = [ [InlineKeyboardButton("▶️ مشاهدة", url=lesson["video"])], [InlineKeyboardButton("📖 ملاحظات", url=lesson["pdf"])] ] await query.edit_message_text( lesson["text"], reply_markup=InlineKeyboardMarkup(buttons) )
+
+def generate_main_menu(): buttons = [ [InlineKeyboardButton(data["title"], callback_data=key)] for key, data in lesson_data.items() ] return InlineKeyboardMarkup(buttons)
+
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE): context.bot_data.setdefault("active_users", set()).add(update.effective_chat.id) await update.message.reply_text( "مرحبا بك في منصة التعلم التفاعلي!", reply_markup=generate_main_menu() )
+
+async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE): query = update.callback_query await query.answer() await show_lesson_details(query)
+
+async def daily_reminder(context: ContextTypes.DEFAULT_TYPE): for user_id in context.bot_data.get("active_users", set()): try: await context.bot.send_message(chat_id=user_id, text="لا تنسَ متابعة دروسك اليوم!") except Exception as e: print(f"خطأ في إرسال التذكير إلى {user_id}: {e}")
+
+async def init(application: Application) -> None: application.bot_data.setdefault("active_users", set())
+
+if name == "main": app = Application.builder().token(BOT_TOKEN).post_init(init).build()
+
+job_queue = app.job_queue
+job_queue.run_daily(daily_reminder, time=time(hour=18))
+
+app.add_handler(CommandHandler("start", start_command))
+app.add_handler(CallbackQueryHandler(handle_buttons))
+
+app.run_polling()
+
