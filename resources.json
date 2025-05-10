@@ -1,0 +1,332 @@
+{
+  "2d3d": {
+    "title": "🎨 2D & 3D",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مقدمة في التصميم ثنائي الأبعاد",
+        "video": "https://youtu.be/Pz75QUo7K5M",
+        "pdf": "https://drive.example.com/pdf/2d_1.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: مقدمة في التصميم ثنائي الأبعاد",
+        "video": "https://youtu.be/LtZg_dvJAFQ",
+        "pdf": "https://drive.example.com/pdf/2d_2.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: مقدمة في التصميم ثنائي الأبعاد",
+        "video": "https://youtu.be/ihQOj7J5RZY",
+        "pdf": "https://drive.example.com/pdf/2d_3.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: مقدمة في التصميم ثنائي الأبعاد",
+        "video": "https://youtu.be/NLZMWT2lKRM",
+        "pdf": "https://drive.example.com/pdf/2d_4.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: مقدمة في التصميم ثنائي الأبعاد",
+        "video": "https://youtu.be/SOFFAHgYLCU",
+        "pdf": "https://drive.example.com/pdf/2d_5.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: مقدمة في التصميم ثلاثي الأبعاد",
+        "video": "https://youtu.be/aAQGgH5-2Rs",
+        "pdf": "https://drive.example.com/pdf/3d_6.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: مقدمة في التصميم ثلاثي الأبعاد",
+        "video": "https://youtu.be/8Y1VR7LOgR0",
+        "pdf": "https://drive.example.com/pdf/3d_7.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: مقدمة في التصميم ثلاثي الأبعاد",
+        "video": "https://youtu.be/r0N0nLPVwbA",
+        "pdf": "https://drive.example.com/pdf/3d_8.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: مقدمة في التصميم ثلاثي الأبعاد",
+        "video": "https://youtu.be/8_gEF9jzWzY",
+        "pdf": "https://drive.example.com/pdf/3d_9.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: مقدمة في التصميم ثلاثي الأبعاد",
+        "video": "https://youtu.be/8CxeqNQ3S3g",
+        "pdf": "https://drive.example.com/pdf/3d_10.pdf"
+      }
+    }
+  },
+  "algorithms": {
+    "title": "🧠 الخوارزميات",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مقدمة في الخوارزميات",
+        "video": "https://youtu.be/fNZzQZgDyWc",
+        "pdf": "https://drive.example.com/pdf/algo_basics.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: مفاهيم أساسية",
+        "video": "https://youtu.be/aK2Q5F1JpPQ",
+        "pdf": "https://drive.example.com/pdf/algo_concepts.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: أنواع الخوارزميات",
+        "video": "https://youtu.be/ImtZ5yENzgE",
+        "pdf": "https://drive.example.com/pdf/algo_types.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: خوارزميات الفرز",
+        "video": "https://youtu.be/kgBjXUE_Nwc",
+        "pdf": "https://drive.example.com/pdf/algo_sorting.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: خوارزميات البحث",
+        "video": "https://youtu.be/coQ5dg8wM2o",
+        "pdf": "https://drive.example.com/pdf/algo_searching.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: التحليل الزمني",
+        "video": "https://youtu.be/aivIekQBT3I",
+        "pdf": "https://drive.example.com/pdf/algo_time.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: التحليل المكاني",
+        "video": "https://youtu.be/E7F8pNH84Ck",
+        "pdf": "https://drive.example.com/pdf/algo_space.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: البرمجة الديناميكية",
+        "video": "https://youtu.be/FhQvxU_f2Aw",
+        "pdf": "https://drive.example.com/pdf/algo_dynamic.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: خوارزميات الرسم البياني",
+        "video": "https://youtu.be/ZmP3x9kA3rI",
+        "pdf": "https://drive.example.com/pdf/algo_graph.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: خوارزميات متقدمة",
+        "video": "https://youtu.be/0bJrUUGTt8I",
+        "pdf": "https://drive.example.com/pdf/algo_advanced.pdf"
+      }
+    }
+  },
+  "env_setup": {
+    "title": "⚙️ تحضير بيئة التنفيذ",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مقدمة عامة",
+        "video": "https://youtu.be/env1",
+        "pdf": "https://drive.example.com/pdf/env_intro.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: تنصيب الأدوات",
+        "video": "https://youtu.be/env2",
+        "pdf": "https://drive.example.com/pdf/env_tools.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: إعداد المحرر",
+        "video": "https://youtu.be/env3",
+        "pdf": "https://drive.example.com/pdf/env_editor.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: متطلبات النظام",
+        "video": "https://youtu.be/env4",
+        "pdf": "https://drive.example.com/pdf/env_requirements.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: بيئة افتراضية",
+        "video": "https://youtu.be/env5",
+        "pdf": "https://drive.example.com/pdf/env_virtualenv.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: تثبيت الحزم",
+        "video": "https://youtu.be/env6",
+        "pdf": "https://drive.example.com/pdf/env_packages.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: إعداد متغيرات البيئة",
+        "video": "https://youtu.be/env7",
+        "pdf": "https://drive.example.com/pdf/env_vars.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: تنظيم الملفات",
+        "video": "https://youtu.be/env8",
+        "pdf": "https://drive.example.com/pdf/env_structure.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: تشغيل أول مشروع",
+        "video": "https://youtu.be/env9",
+        "pdf": "https://drive.example.com/pdf/env_run.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: حل المشاكل الشائعة",
+        "video": "https://youtu.be/env10",
+        "pdf": "https://drive.example.com/pdf/env_troubleshooting.pdf"
+      }
+    }
+  },
+  "data_modeling": {
+    "title": "🗂️ نمذجة البيانات",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مفاهيم النمذجة",
+        "video": "https://youtu.be/dm1",
+        "pdf": "https://drive.example.com/pdf/dm_concepts.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: الكيانات والصفات",
+        "video": "https://youtu.be/dm2",
+        "pdf": "https://drive.example.com/pdf/dm_entities.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: العلاقات",
+        "video": "https://youtu.be/dm3",
+        "pdf": "https://drive.example.com/pdf/dm_relations.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: ERD",
+        "video": "https://youtu.be/dm4",
+        "pdf": "https://drive.example.com/pdf/dm_erd.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: أنواع العلاقات",
+        "video": "https://youtu.be/dm5",
+        "pdf": "https://drive.example.com/pdf/dm_types.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: المفتاح الأساسي",
+        "video": "https://youtu.be/dm6",
+        "pdf": "https://drive.example.com/pdf/dm_pk.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: المفتاح الأجنبي",
+        "video": "https://youtu.be/dm7",
+        "pdf": "https://drive.example.com/pdf/dm_fk.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: تحسين النموذج",
+        "video": "https://youtu.be/dm8",
+        "pdf": "https://drive.example.com/pdf/dm_optimize.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: النموذج المنطقي",
+        "video": "https://youtu.be/dm9",
+        "pdf": "https://drive.example.com/pdf/dm_logical.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: النموذج الفيزيائي",
+        "video": "https://youtu.be/dm10",
+        "pdf": "https://drive.example.com/pdf/dm_physical.pdf"
+      }
+    }
+  },
+  "project_mgmt": {
+    "title": "📋 تسيير مشروع",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مقدمة في إدارة المشاريع",
+        "video": "https://youtu.be/pm1",
+        "pdf": "https://drive.example.com/pdf/pm_intro.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: تحديد نطاق المشروع",
+        "video": "https://youtu.be/pm2",
+        "pdf": "https://drive.example.com/pdf/pm_scope.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: تخطيط المهام",
+        "video": "https://youtu.be/pm3",
+        "pdf": "https://drive.example.com/pdf/pm_tasks.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: الجدولة الزمنية",
+        "video": "https://youtu.be/pm4",
+        "pdf": "https://drive.example.com/pdf/pm_schedule.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: تقدير الموارد",
+        "video": "https://youtu.be/pm5",
+        "pdf": "https://drive.example.com/pdf/pm_resources.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: إدارة المخاطر",
+        "video": "https://youtu.be/pm6",
+        "pdf": "https://drive.example.com/pdf/pm_risks.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: تتبع التقدم",
+        "video": "https://youtu.be/pm7",
+        "pdf": "https://drive.example.com/pdf/pm_tracking.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: إدارة الفريق",
+        "video": "https://youtu.be/pm8",
+        "pdf": "https://drive.example.com/pdf/pm_team.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: الاتصال والتقارير",
+        "video": "https://youtu.be/pm9",
+        "pdf": "https://drive.example.com/pdf/pm_comms.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: إغلاق المشروع",
+        "video": "https://youtu.be/pm10",
+        "pdf": "https://drive.example.com/pdf/pm_closure.pdf"
+      }
+    }
+  },
+  "video_editing": {
+    "title": "🎬 معالجة الفيديوهات",
+    "lessons": {
+      "lesson1": {
+        "text": "الدرس 1: مقدمة في تحرير الفيديو",
+        "video": "https://youtu.be/vid1",
+        "pdf": "https://drive.example.com/pdf/vid_intro.pdf"
+      },
+      "lesson2": {
+        "text": "الدرس 2: قص ودمج المقاطع",
+        "video": "https://youtu.be/vid2",
+        "pdf": "https://drive.example.com/pdf/vid_cut_merge.pdf"
+      },
+      "lesson3": {
+        "text": "الدرس 3: إضافة تأثيرات",
+        "video": "https://youtu.be/vid3",
+        "pdf": "https://drive.example.com/pdf/vid_effects.pdf"
+      },
+      "lesson4": {
+        "text": "الدرس 4: العمل مع الصوت",
+        "video": "https://youtu.be/vid4",
+        "pdf": "https://drive.example.com/pdf/vid_audio.pdf"
+      },
+      "lesson5": {
+        "text": "الدرس 5: الكتابة على الفيديو",
+        "video": "https://youtu.be/vid5",
+        "pdf": "https://drive.example.com/pdf/vid_text.pdf"
+      },
+      "lesson6": {
+        "text": "الدرس 6: الفلاتر والانتقالات",
+        "video": "https://youtu.be/vid6",
+        "pdf": "https://drive.example.com/pdf/vid_filters.pdf"
+      },
+      "lesson7": {
+        "text": "الدرس 7: التصدير بجودة عالية",
+        "video": "https://youtu.be/vid7",
+        "pdf": "https://drive.example.com/pdf/vid_export.pdf"
+      },
+      "lesson8": {
+        "text": "الدرس 8: تطبيقات الهاتف",
+        "video": "https://youtu.be/vid8",
+        "pdf": "https://drive.example.com/pdf/vid_mobile.pdf"
+      },
+      "lesson9": {
+        "text": "الدرس 9: استخدام الذكاء الاصطناعي",
+        "video": "https://youtu.be/vid9",
+        "pdf": "https://drive.example.com/pdf/vid_ai.pdf"
+      },
+      "lesson10": {
+        "text": "الدرس 10: مشروع نهائي",
+        "video": "https://youtu.be/vid10",
+        "pdf": "https://drive.example.com/pdf/vid_final.pdf"
+      }
+    }
+  }
+}
