@@ -28,8 +28,8 @@ async def lessons_2d3d(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token(BOT_TOKEN).build()
-
+    
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("2d3d", lessons_2d3d))
-
+    
     app.run_polling()
